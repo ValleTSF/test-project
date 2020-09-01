@@ -5,24 +5,15 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class MyRandomMethodsTest {
+     MyRandomMethods mrm = new MyRandomMethods();
 
     @Test
-    public void randomBetween1And10() {
-    }
-
-    @Test
-    public void randomBetween11And20() {
-    }
-
-    @Test
-    public void randomBetween21And30() {
-    }
-
-    @Test
-    public void randomBetween31And40() {
-    }
-
-    @Test
-    public void randomBetween41And50() {
+    public void test() {
+        int tempValue = 0;
+        for (int i = 0; i < 1000; i++) {
+            tempValue = mrm.RandomBetween1And10();
+            System.out.println(tempValue);
+            assertTrue((tempValue >= 1) && (tempValue <= 10));
+        }
     }
 }
